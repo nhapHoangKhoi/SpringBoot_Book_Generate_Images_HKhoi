@@ -134,6 +134,46 @@ public class PipelineStateTest {
         );
     }
 
+    @Test
+    void illustrationsPendingIsPending() {
+        assertEquals(
+                GenerationState.PENDING,
+                PipelineState.deriveIllustrationsStatus(
+                        new ItemState(GenerationState.PENDING)
+                )
+        );
+    }
+
+    @Test
+    void illustrationsRunningIsRunning() {
+        assertEquals(
+                GenerationState.RUNNING,
+                PipelineState.deriveIllustrationsStatus(
+                        new ItemState(GenerationState.RUNNING)
+                )
+        );
+    }
+
+    @Test
+    void illustrationsFailedIsFailed() {
+        assertEquals(
+                GenerationState.FAILED,
+                PipelineState.deriveIllustrationsStatus(
+                        new ItemState(GenerationState.FAILED)
+                )
+        );
+    }
+
+    @Test
+    void illustrationsCompletedIsCompleted() {
+        assertEquals(
+                GenerationState.COMPLETED,
+                PipelineState.deriveIllustrationsStatus(
+                        new ItemState(GenerationState.COMPLETED)
+                )
+        );
+    }
+
     private List<ItemState> items(
             GenerationState first,
             GenerationState second
