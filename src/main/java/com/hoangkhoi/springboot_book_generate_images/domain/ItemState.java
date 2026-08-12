@@ -42,7 +42,7 @@ public final class ItemState {
         state = GenerationState.RUNNING;
     }
 
-    private void transitionTo(GenerationState newState) {
+    void transitionTo(GenerationState newState) {
         if (!isValidTransition(state, newState)) {
             throw new IllegalStateException(
                     "Invalid state transition: "
@@ -58,7 +58,8 @@ public final class ItemState {
             GenerationState next
     ) {
         return switch (current) {
-            case PENDING -> next == GenerationState.RUNNING;
+            case PENDING ->
+                    next == GenerationState.RUNNING;
 
             case RUNNING ->
                     next == GenerationState.COMPLETED
@@ -67,7 +68,8 @@ public final class ItemState {
             case FAILED ->
                     next == GenerationState.RUNNING;
 
-            case COMPLETED -> false;
+            case COMPLETED ->
+                    false;
         };
     }
 }
