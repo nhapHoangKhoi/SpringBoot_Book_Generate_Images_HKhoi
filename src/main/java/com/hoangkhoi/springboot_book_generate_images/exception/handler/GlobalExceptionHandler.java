@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -27,6 +28,17 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse.failed(
                 ExceptionMessages.PROJECT_NOT_FOUND_MESSAGE,
                 ApiError.of(ExceptionMessages.PROJECT_NOT_FOUND)));
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ApiResponse<ApiError>> handleInvalidRequest(
+            MethodArgumentNotValidException ex) {
+        String message = ex.getBindingResult().getFieldErrors().stream()
+                .findFirst()
+                .map(field -> field.getField() + ": " + field.getDefaultMessage())
+                .orElse(ExceptionMessages.INVALID_REQUEST_MESSAGE);
+        return ResponseEntity.badRequest().body(ApiResponse.failed(
+                message, ApiError.of(ExceptionMessages.INVALID_REQUEST)));
     }
 
     @ExceptionHandler(StorageException.class)
