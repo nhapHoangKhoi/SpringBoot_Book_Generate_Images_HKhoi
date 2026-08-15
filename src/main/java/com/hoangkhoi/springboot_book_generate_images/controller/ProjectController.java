@@ -56,6 +56,17 @@ public class ProjectController {
                 SuccessMessages.CREATE_PROJECT_SUCCESS, ProjectDetail.of(created, Instant.now())));
     }
 
+    @GetMapping("/{projectId}")
+    @Operation(summary = "Get a project's full pipeline state (polled while a step runs)")
+    public ResponseEntity<ApiResponse<ProjectDetail>> getProjectById(
+            @RequestHeader(value = "X-User-Id", required = false) String userId,
+            @PathVariable String projectId) {
+        Project project = load(requireUser(userId), projectId);
+
+        return ResponseEntity.ok(ApiResponse.ok(
+                SuccessMessages.GET_PROJECT_SUCCESS, ProjectDetail.of(project, Instant.now())));
+    }
+
     private String requireUser(String userId) {
         if (userId == null || userId.isBlank()) {
             throw new UnauthorizedException();
@@ -63,4 +74,8 @@ public class ProjectController {
         return projectRepository.findUser(userId).orElseThrow(UnauthorizedException::new).getId();
     }
 
+    private Project load(String userId, String projectId) {
+        return projectRepository.find(userId, projectId)
+                .orElseThrow(() -> new ProjectNotFoundException(userId, projectId));
+    }
 }
