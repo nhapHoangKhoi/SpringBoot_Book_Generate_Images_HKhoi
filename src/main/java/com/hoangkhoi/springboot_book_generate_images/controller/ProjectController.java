@@ -1,6 +1,7 @@
 package com.hoangkhoi.springboot_book_generate_images.controller;
 
 import com.hoangkhoi.springboot_book_generate_images.dto.request.CreateProjectRequest;
+import com.hoangkhoi.springboot_book_generate_images.dto.response.ProjectDetail;
 import com.hoangkhoi.springboot_book_generate_images.dto.response.ProjectSummary;
 import com.hoangkhoi.springboot_book_generate_images.exception.ProjectNotFoundException;
 import com.hoangkhoi.springboot_book_generate_images.exception.UnauthorizedException;
@@ -43,7 +44,17 @@ public class ProjectController {
                 SuccessMessages.GET_ALL_PROJECTS_SUCCESS, projects));
     }
 
+    @PostMapping
+    @Operation(summary = "Create a project from a book's text")
+    public ResponseEntity<ApiResponse<ProjectDetail>> createProject(
+            @RequestHeader(value = "X-User-Id", required = false) String userId,
+            @Valid @RequestBody CreateProjectRequest request) {
+        Project created = projectRepository.create(
+                requireUser(userId), request.title().trim(), request.bookText());
 
+        return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse.ok(
+                SuccessMessages.CREATE_PROJECT_SUCCESS, ProjectDetail.of(created, Instant.now())));
+    }
 
     private String requireUser(String userId) {
         if (userId == null || userId.isBlank()) {
