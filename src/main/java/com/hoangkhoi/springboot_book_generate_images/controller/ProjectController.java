@@ -81,6 +81,22 @@ public class ProjectController {
                 projectRepository.readBookText(user, projectId)));
     }
 
+    @GetMapping("/{projectId}/images/{fileName}")
+    @Operation(summary = "Get a generated image")
+    public ResponseEntity<Resource> getImage(
+            @RequestHeader(value = "X-User-Id", required = false) String userId,
+            @RequestParam(value = "userId", required = false) String userIdParam,
+            @PathVariable String projectId,
+            @PathVariable String fileName) {
+        String caller = userId != null && !userId.isBlank() ? userId : userIdParam;
+
+        return projectRepository.findImage(requireUser(caller), projectId, fileName)
+                .<ResponseEntity<Resource>>map(path -> ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_PNG)
+                        .body(new FileSystemResource(path)))
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     private String requireUser(String userId) {
         if (userId == null || userId.isBlank()) {
             throw new UnauthorizedException();
