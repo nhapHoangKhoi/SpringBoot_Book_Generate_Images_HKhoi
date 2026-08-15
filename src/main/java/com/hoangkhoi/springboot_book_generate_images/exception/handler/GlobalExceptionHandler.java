@@ -15,6 +15,14 @@ public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    @ExceptionHandler(ProjectNotFoundException.class)
+    public ResponseEntity<ApiResponse<ApiError>> handleNotFound(ProjectNotFoundException ex) {
+        logger.warn(ExceptionMessages.UNEXPECTED_ERROR, ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse.failed(
+                ExceptionMessages.PROJECT_NOT_FOUND_MESSAGE,
+                ApiError.of(ExceptionMessages.PROJECT_NOT_FOUND)));
+    }
+
     @ExceptionHandler(StorageException.class)
     public ResponseEntity<ApiResponse<ApiError>> handleStorage(StorageException ex) {
         logger.error(ExceptionMessages.UNEXPECTED_ERROR, ex.getMessage(), ex);
