@@ -15,6 +15,12 @@ public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<ApiResponse<ApiError>> handleUnauthorized(UnauthorizedException ex) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ApiResponse.failed(
+                ex.getMessage(), ApiError.of(ExceptionMessages.UNAUTHORIZED)));
+    }
+
     @ExceptionHandler(ProjectNotFoundException.class)
     public ResponseEntity<ApiResponse<ApiError>> handleNotFound(ProjectNotFoundException ex) {
         logger.warn(ExceptionMessages.UNEXPECTED_ERROR, ex.getMessage());
