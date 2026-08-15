@@ -67,6 +67,20 @@ public class ProjectController {
                 SuccessMessages.GET_PROJECT_SUCCESS, ProjectDetail.of(project, Instant.now())));
     }
 
+    // The book text, separate from the detail payload because that one is polled
+    @GetMapping("/{projectId}/book")
+    @Operation(summary = "Get the project's full book text")
+    public ResponseEntity<ApiResponse<String>> getBookText(
+            @RequestHeader(value = "X-User-Id", required = false) String userId,
+            @PathVariable String projectId) {
+        String user = requireUser(userId);
+        load(user, projectId);
+
+        return ResponseEntity.ok(ApiResponse.ok(
+                SuccessMessages.GET_BOOK_TEXT_SUCCESS,
+                projectRepository.readBookText(user, projectId)));
+    }
+
     private String requireUser(String userId) {
         if (userId == null || userId.isBlank()) {
             throw new UnauthorizedException();
