@@ -1,4 +1,4 @@
-package com.hoangkhoi.springboot_book_generate_images;
+package com.hoangkhoi.springboot_book_generate_images.enums;
 
 public enum ItemState {
     PENDING,
