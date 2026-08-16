@@ -9,6 +9,7 @@ public class SuccessMessages {
     public static final String GET_PROJECT_SUCCESS = "Get project successfully!";
     public static final String GET_BOOK_TEXT_SUCCESS = "Get book text successfully!";
     public static final String RUN_STEP_SUCCESS = "Step %s started!";
+    public static final String RESET_STEP_SUCCESS = "Step %s is ready to retry!";
 
     private SuccessMessages() {
     }

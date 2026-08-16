@@ -234,4 +234,44 @@ public class PipelineService {
         return repository.find(userId, projectId)
                 .orElseThrow(() -> new ProjectNotFoundException(userId, projectId));
     }
+
+    /**
+     * Clears a step stranded in RUNNING so the user can retry it, without touching earlier results.
+     *
+     * throws StepRejectedException if the step is running normally and simply hasn't finished
+     */
+    public Project reset(String userId, String projectId) {
+        return repository.update(userId, projectId, project -> {
+            if (!PipelineRules.canReset(project, Instant.now())) {
+                throw new StepRejectedException(RunRejection.ALREADY_RUNNING,
+                        PipelineRules.currentStep(project.getStatus()).orElse(null));
+            }
+            project.failStep("This step was interrupted and never finished. Retrying is safe.");
+            return project;
+        });
+    }
+
+    /**
+     * Fails every step left RUNNING by a restart. Called once at startup: the work lived in this
+     * process, so nothing is going to finish it, and the user needs a retry button rather than a
+     * spinner that never stops.
+     *
+     * return how many projects were released
+     */
+    public int releaseStrandedSteps() {
+        int released = 0;
+        for (String userId : repository.findAllUserIds()) {
+            for (Project project : repository.findAll(userId)) {
+                if (project.getStepState() != StepState.RUNNING) {
+                    continue;
+                }
+                repository.update(userId, project.getId(), p -> {
+                    p.failStep("This step was interrupted by a server restart. Retrying is safe.");
+                    return null;
+                });
+                released++;
+            }
+        }
+        return released;
+    }
 }
