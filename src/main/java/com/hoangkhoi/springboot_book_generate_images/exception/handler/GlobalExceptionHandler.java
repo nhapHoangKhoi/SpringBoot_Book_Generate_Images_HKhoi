@@ -30,6 +30,17 @@ public class GlobalExceptionHandler {
                 ApiError.of(ExceptionMessages.PROJECT_NOT_FOUND)));
     }
 
+    /**
+     * A refused step. 409 rather than 400: the request was well formed, the project just wasn't in
+     * a state to accept it — most often because the step is already running in another tab.
+     */
+    @ExceptionHandler(StepRejectedException.class)
+    public ResponseEntity<ApiResponse<ApiError>> handleStepRejected(StepRejectedException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ApiResponse.failed(
+                ex.getMessage(),
+                new ApiError(ex.getRejection().name(), ex.getCurrentStep())));
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiResponse<ApiError>> handleInvalidRequest(
             MethodArgumentNotValidException ex) {

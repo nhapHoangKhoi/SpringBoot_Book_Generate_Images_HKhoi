@@ -8,6 +8,7 @@ public class SuccessMessages {
     public static final String CREATE_PROJECT_SUCCESS = "Create project successfully!";
     public static final String GET_PROJECT_SUCCESS = "Get project successfully!";
     public static final String GET_BOOK_TEXT_SUCCESS = "Get book text successfully!";
+    public static final String RUN_STEP_SUCCESS = "Step %s started!";
 
     private SuccessMessages() {
     }

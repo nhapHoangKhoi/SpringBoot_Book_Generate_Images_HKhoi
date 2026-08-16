@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/** Sign-in. An unknown email creates the user; a known one loads them (assessment §4.1). */
+
 @RestController
 @RequestMapping("/api/session")
 public class SessionController {
