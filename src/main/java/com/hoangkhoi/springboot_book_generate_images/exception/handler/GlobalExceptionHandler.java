@@ -52,6 +52,13 @@ public class GlobalExceptionHandler {
                 message, ApiError.of(ExceptionMessages.INVALID_REQUEST)));
     }
 
+    @ExceptionHandler(GeminiException.class)
+    public ResponseEntity<ApiResponse<ApiError>> handleGemini(GeminiException ex) {
+        logger.warn(ExceptionMessages.UNEXPECTED_ERROR, ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(ApiResponse.failed(
+                ex.getMessage(), ApiError.of(ExceptionMessages.GEMINI_ERROR)));
+    }
+
     @ExceptionHandler(StorageException.class)
     public ResponseEntity<ApiResponse<ApiError>> handleStorage(StorageException ex) {
         logger.error(ExceptionMessages.UNEXPECTED_ERROR, ex.getMessage(), ex);
