@@ -69,7 +69,7 @@ public class PipelineService {
             switch (step) {
                 case STYLE -> runStyle(userId, projectId, requestedStyle);
                 case CHARACTERS -> runCharacters(userId, projectId);
-                // case CHAPTERS -> runChapters();
+                // case CHAPTERS -> runChapters()
                 // case PORTRAITS, ILLUSTRATIONS -> runImages();
             }
             repository.update(userId, projectId, project -> {
