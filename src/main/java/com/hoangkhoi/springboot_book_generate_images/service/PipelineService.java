@@ -69,8 +69,8 @@ public class PipelineService {
             switch (step) {
                 case STYLE -> runStyle(userId, projectId, requestedStyle);
                 case CHARACTERS -> runCharacters(userId, projectId);
-                // case CHAPTERS -> runChapters()
-                // case PORTRAITS, ILLUSTRATIONS -> runImages();
+                case CHAPTERS -> runChapters(userId, projectId);
+                // case PORTRAITS, ILLUSTRATIONS -> runImages(userId, projectId, step);
             }
             repository.update(userId, projectId, project -> {
                 project.completeStep(step);
@@ -111,6 +111,21 @@ public class PipelineService {
                 PipelineRules.MAX_CHARACTERS);
         repository.update(userId, projectId, p -> {
             p.setCharacters(toItems(generated));
+            return null;
+        });
+    }
+
+    private void runChapters(String userId, String projectId) {
+        Project project = load(userId, projectId);
+        List<String> characterNames = project.getCharacters().stream()
+                .map(IllustratedItem::getName)
+                .toList();
+        List<GeneratedItem> generated = PipelineRules.trimToCap(
+                gemini.generateChapters(
+                        contextRef(userId, projectId), project.getStyle(), characterNames),
+                PipelineRules.MAX_CHAPTERS);
+        repository.update(userId, projectId, p -> {
+            p.setChapters(toItems(generated));
             return null;
         });
     }
