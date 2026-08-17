@@ -20,7 +20,8 @@ run "BACKEND — JUnit 5 + Mockito (Spring Boot)" ./mvnw test
 backend=$?
 
 if [ -d frontend ]; then
-  run "FRONTEND — Vitest + React Testing Library" npm --prefix frontend test
+  # Subshell cd rather than `npm --prefix` — see the note in start.sh.
+  run "FRONTEND — Vitest + React Testing Library" bash -c 'cd frontend && npm test'
   frontend=$?
 else
   echo "frontend/ not found — skipping frontend tests" | tee -a "$REPORT"

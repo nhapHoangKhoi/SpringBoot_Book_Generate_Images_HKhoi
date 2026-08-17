@@ -13,17 +13,13 @@ BACKEND — JUnit 5 + Mockito (Spring Boot)
 [INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] 
 [INFO] --- compiler:3.14.0:compile (default-compile) @ springboot-book-generate-images ---
-[INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 43 source files with javac [debug parameters release 21] to target\classes
-[INFO] /D:/5_Programming_languages/16_Gradnfq/Project_Book_Generate_Images/springboot-book-generate-images/src/main/java/com/hoangkhoi/springboot_book_generate_images/service/impl/GeminiWire.java: Some input files use or override a deprecated API.
-[INFO] /D:/5_Programming_languages/16_Gradnfq/Project_Book_Generate_Images/springboot-book-generate-images/src/main/java/com/hoangkhoi/springboot_book_generate_images/service/impl/GeminiWire.java: Recompile with -Xlint:deprecation for details.
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot-book-generate-images ---
 [INFO] skip non existing resourceDirectory D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ springboot-book-generate-images ---
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 15 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- surefire:3.5.3:test (default-test) @ springboot-book-generate-images ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
@@ -32,8 +28,8 @@ BACKEND — JUnit 5 + Mockito (Spring Boot)
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest
-05:31:20.349 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest]: PipelineControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-05:31:20.535 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest
+06:16:11.118 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest]: PipelineControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06:16:11.287 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -44,23 +40,23 @@ BACKEND — JUnit 5 + Mockito (Spring Boot)
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:20.937+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : Starting PipelineControllerTest using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:20.938+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:11.673+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : Starting PipelineControllerTest using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:11.674+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : No active profile set, falling back to 1 default profile: "default"
 Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\KHOI NGUYEN HOANG\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.7\byte-buddy-agent-1.17.7.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
 WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-2026-08-18T05:31:23.730+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-18T05:31:23.731+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-18T05:31:23.736+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2026-08-18T05:31:23.824+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : Started PipelineControllerTest in 3.217 seconds (process running for 4.304)
-2026-08-18T05:31:24.534+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'step': Failed to convert value of type 'java.lang.String' to required type 'com.hoangkhoi.springboot_book_generate_images.enums.Step'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable com.hoangkhoi.springboot_book_generate_images.enums.Step] for value [DANCING]]
-[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.546 s -- in com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest
+2026-08-18T06:16:13.781+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-18T06:16:13.782+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-18T06:16:13.785+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-08-18T06:16:13.838+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.PipelineControllerTest  : Started PipelineControllerTest in 2.483 seconds (process running for 3.463)
+2026-08-18T06:16:14.360+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'step': Failed to convert value of type 'java.lang.String' to required type 'com.hoangkhoi.springboot_book_generate_images.enums.Step'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable com.hoangkhoi.springboot_book_generate_images.enums.Step] for value [DANCING]]
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.550 s -- in com.hoangkhoi.springboot_book_generate_images.controller.PipelineControllerTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest
-2026-08-18T05:31:24.744+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-08-18T05:31:24.768+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest
+2026-08-18T06:16:14.531+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-18T06:16:14.547+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -71,17 +67,17 @@ Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot lo
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:24.823+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : Starting ProjectControllerTest using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:24.824+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2026-08-18T05:31:25.174+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-18T05:31:25.174+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-18T05:31:25.175+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-08-18T05:31:25.183+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : Started ProjectControllerTest in 0.407 seconds (process running for 5.664)
-2026-08-18T05:31:25.195+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.e.handler.GlobalExceptionHandler   : Unexpected error: No project nope for user 06dc5a5a4d28e2a6
-[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.833 s -- in com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest
+2026-08-18T06:16:14.604+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : Starting ProjectControllerTest using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:14.604+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:14.863+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-18T06:16:14.863+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-18T06:16:14.863+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-08-18T06:16:14.868+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.ProjectControllerTest   : Started ProjectControllerTest in 0.315 seconds (process running for 4.493)
+2026-08-18T06:16:14.879+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.e.handler.GlobalExceptionHandler   : Unexpected error: No project nope for user 06dc5a5a4d28e2a6
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.601 s -- in com.hoangkhoi.springboot_book_generate_images.controller.ProjectControllerTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest
-2026-08-18T05:31:25.579+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest]: SessionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-08-18T05:31:25.590+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest
+2026-08-18T06:16:15.132+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest]: SessionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-18T06:16:15.143+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -92,17 +88,17 @@ Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot lo
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:25.633+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : Starting SessionControllerTest using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:25.633+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2026-08-18T05:31:26.007+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-18T05:31:26.008+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-18T05:31:26.009+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-08-18T05:31:26.019+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : Started SessionControllerTest in 0.424 seconds (process running for 6.499)
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.801 s -- in com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest
+2026-08-18T06:16:15.171+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : Starting SessionControllerTest using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:15.171+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:15.356+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-18T06:16:15.356+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-18T06:16:15.357+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-08-18T06:16:15.362+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.controller.SessionControllerTest   : Started SessionControllerTest in 0.215 seconds (process running for 4.987)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.398 s -- in com.hoangkhoi.springboot_book_generate_images.controller.SessionControllerTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.model.ProjectStateTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s -- in com.hoangkhoi.springboot_book_generate_images.model.ProjectStateTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in com.hoangkhoi.springboot_book_generate_images.model.ProjectStateTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.PipelineIntegrationTest
-2026-08-18T05:31:26.484+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.PipelineIntegrationTest
+2026-08-18T06:16:15.583+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.PipelineIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -113,24 +109,24 @@ Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot lo
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:26.535+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : Starting PipelineIntegrationTest using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:26.535+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : No active profile set, falling back to 1 default profile: "default"
-2026-08-18T05:31:27.443+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT3S, images PT15S.
-2026-08-18T05:31:28.077+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-18T05:31:28.078+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-18T05:31:28.078+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-08-18T05:31:28.086+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : Started PipelineIntegrationTest in 1.593 seconds (process running for 8.566)
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.989 s -- in com.hoangkhoi.springboot_book_generate_images.PipelineIntegrationTest
+2026-08-18T06:16:15.612+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : Starting PipelineIntegrationTest using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:15.612+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:16.129+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT3S, images PT15S.
+2026-08-18T06:16:16.447+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-18T06:16:16.448+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-18T06:16:16.448+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-08-18T06:16:16.453+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.PipelineIntegrationTest            : Started PipelineIntegrationTest in 0.861 seconds (process running for 6.077)
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.182 s -- in com.hoangkhoi.springboot_book_generate_images.PipelineIntegrationTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.repository.JsonStoreTest
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s -- in com.hoangkhoi.springboot_book_generate_images.repository.JsonStoreTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s -- in com.hoangkhoi.springboot_book_generate_images.repository.JsonStoreTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.repository.ProjectLocksTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.hoangkhoi.springboot_book_generate_images.repository.ProjectLocksTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.hoangkhoi.springboot_book_generate_images.repository.ProjectLocksTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.repository.ProjectRepositoryTest
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.689 s -- in com.hoangkhoi.springboot_book_generate_images.repository.ProjectRepositoryTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 s -- in com.hoangkhoi.springboot_book_generate_images.repository.ProjectRepositoryTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode
-2026-08-18T05:31:29.207+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode]: SimulateMode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-08-18T05:31:29.221+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode
+2026-08-18T06:16:17.396+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode]: SimulateMode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-18T06:16:17.409+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -141,59 +137,59 @@ Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot lo
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:29.246+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : Starting GeminiModeTest.SimulateMode using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:29.246+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : No active profile set, falling back to 1 default profile: "default"
-2026-08-18T05:31:29.440+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT0.001S, images PT0.001S.
-2026-08-18T05:31:29.556+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : Started GeminiModeTest.SimulateMode in 0.328 seconds (process running for 10.036)
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.749 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode
-[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.751 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest
+2026-08-18T06:16:17.428+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : Starting GeminiModeTest.SimulateMode using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:17.429+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:17.576+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT0.001S, images PT0.001S.
+2026-08-18T06:16:17.666+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.s.i.GeminiModeTest$SimulateMode    : Started GeminiModeTest.SimulateMode in 0.252 seconds (process running for 7.29)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.582 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest$SimulateMode
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.583 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.GeminiModeTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.LiveGeminiVerificationTest
-[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.001 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.LiveGeminiVerificationTest
+[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.LiveGeminiVerificationTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$Failures
-2026-08-18T05:31:29.992+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
-2026-08-18T05:31:30.003+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 429 trying to generate a style: rate limited
-2026-08-18T05:31:30.007+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
-2026-08-18T05:31:30.011+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
-2026-08-18T05:31:30.012+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 500 trying to generate a style: upstream exploded
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$Failures
+2026-08-18T06:16:18.006+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
+2026-08-18T06:16:18.020+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 429 trying to generate a style: rate limited
+2026-08-18T06:16:18.024+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
+2026-08-18T06:16:18.027+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
+2026-08-18T06:16:18.028+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 500 trying to generate a style: upstream exploded
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$Failures
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$Images
-2026-08-18T05:31:30.017+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 84 bytes (continuing img-1)
-2026-08-18T05:31:30.026+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini start the illustration conversation ? 442 bytes
-2026-08-18T05:31:30.030+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 74 bytes (continuing img-1)
-2026-08-18T05:31:30.033+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 79 bytes (continuing int-1)
-2026-08-18T05:31:30.036+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 79 bytes (continuing img-1)
-2026-08-18T05:31:30.037+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 429 trying to generate an image: {"error":{"message":"quota exceeded"}}
+2026-08-18T06:16:18.035+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 84 bytes (continuing img-1)
+2026-08-18T06:16:18.043+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini start the illustration conversation ? 442 bytes
+2026-08-18T06:16:18.047+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 74 bytes (continuing img-1)
+2026-08-18T06:16:18.050+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 79 bytes (continuing int-1)
+2026-08-18T06:16:18.053+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate an image ? 79 bytes (continuing img-1)
+2026-08-18T06:16:18.054+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini returned 429 trying to generate an image: {"error":{"message":"quota exceeded"}}
 [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$Images
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$ReadingReplies
-2026-08-18T05:31:30.041+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
-2026-08-18T05:31:30.044+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
-2026-08-18T05:31:30.048+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate chapter prompts ? 620 bytes (continuing int-1)
-2026-08-18T05:31:30.050+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
-2026-08-18T05:31:30.053+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
-2026-08-18T05:31:30.056+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$ReadingReplies
+2026-08-18T06:16:18.057+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
+2026-08-18T06:16:18.060+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
+2026-08-18T06:16:18.063+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate chapter prompts ? 620 bytes (continuing int-1)
+2026-08-18T06:16:18.067+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 226 bytes (continuing int-1)
+2026-08-18T06:16:18.070+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
+2026-08-18T06:16:18.074+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate characters ? 585 bytes (continuing int-1)
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$ReadingReplies
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$SendingTheBook
-2026-08-18T05:31:30.062+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 40 bytes (this is the only time the text is sent)
-2026-08-18T05:31:30.064+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini send the book ? 218 bytes
-2026-08-18T05:31:30.067+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 228 bytes (continuing int-123)
-2026-08-18T05:31:30.070+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 4 bytes (this is the only time the text is sent)
-2026-08-18T05:31:30.073+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 4 bytes (this is the only time the text is sent)
-2026-08-18T05:31:30.074+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini send the book ? 218 bytes
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$SendingTheBook
-[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest
+2026-08-18T06:16:18.080+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 40 bytes (this is the only time the text is sent)
+2026-08-18T06:16:18.081+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini send the book ? 218 bytes
+2026-08-18T06:16:18.083+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini generate a style ? 228 bytes (continuing int-123)
+2026-08-18T06:16:18.086+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 4 bytes (this is the only time the text is sent)
+2026-08-18T06:16:18.089+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini upload the book ? 4 bytes (this is the only time the text is sent)
+2026-08-18T06:16:18.089+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.RestGeminiClient      : Gemini send the book ? 218 bytes
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest$SendingTheBook
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s -- in com.hoangkhoi.springboot_book_generate_images.service.impl.RestGeminiClientTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Caps
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Caps
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Caps
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Staleness
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Staleness
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$Staleness
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$CheckRun
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$CheckRun
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$CheckRun
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$CurrentStep
 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest$CurrentStep
-[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineRulesTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.service.PipelineServiceTest
-2026-08-18T05:31:30.269+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.PipelineService            : Step CHARACTERS failed for project ee01ff59
+2026-08-18T06:16:18.314+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.PipelineService            : Step CHARACTERS failed for project 170f2343
 
 java.lang.IllegalStateException: Gemini returned 503
 	at com.hoangkhoi.springboot_book_generate_images.service.PipelineServiceTest.aFailedStepKeepsEarlierResultsAndCanBeRetried(PipelineServiceTest.java:175) ~[test-classes/:na]
@@ -272,7 +268,7 @@ java.lang.IllegalStateException: Gemini returned 503
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.3.jar:3.5.3]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.3.jar:3.5.3]
 
-2026-08-18T05:31:30.824+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.PipelineService            : Step PORTRAITS failed for project 6a7c63b8
+2026-08-18T06:16:18.805+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.PipelineService            : Step PORTRAITS failed for project ead6ed31
 
 java.lang.IllegalStateException: safety filter
 	at com.hoangkhoi.springboot_book_generate_images.service.PipelineServiceTest.retryingPortraitsOnlyRedrawsTheOneThatFailed(PipelineServiceTest.java:196) ~[test-classes/:na]
@@ -351,10 +347,10 @@ java.lang.IllegalStateException: safety filter
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.3.jar:3.5.3]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.3.jar:3.5.3]
 
-[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.366 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineServiceTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.264 s -- in com.hoangkhoi.springboot_book_generate_images.service.PipelineServiceTest
 [INFO] Running com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests
-2026-08-18T05:31:31.466+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests]: SpringbootBookGenerateImagesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-08-18T05:31:31.467+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests
+2026-08-18T06:16:19.375+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests]: SpringbootBookGenerateImagesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-18T06:16:19.376+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplication for test class com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -365,11 +361,11 @@ java.lang.IllegalStateException: safety filter
 
  :: Spring Boot ::                (v3.5.5)
 
-2026-08-18T05:31:31.484+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : Starting SpringbootBookGenerateImagesApplicationTests using Java 21.0.1 with PID 1640 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
-2026-08-18T05:31:31.484+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2026-08-18T05:31:31.610+07:00  WARN 1640 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT3S, images PT15S.
-2026-08-18T05:31:31.700+07:00  INFO 1640 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : Started SpringbootBookGenerateImagesApplicationTests in 0.23 seconds (process running for 12.18)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.246 s -- in com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests
+2026-08-18T06:16:19.391+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : Starting SpringbootBookGenerateImagesApplicationTests using Java 21.0.1 with PID 22036 (started by KHOI NGUYEN HOANG in D:\5_Programming_languages\16_Gradnfq\Project_Book_Generate_Images\springboot-book-generate-images)
+2026-08-18T06:16:19.391+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T06:16:19.505+07:00  WARN 22036 --- [springboot-book-generate-images] [           main] c.h.s.service.impl.SimulateGeminiClient  : gemini.mode=simulate � no real Gemini calls. Text steps pause PT3S, images PT15S.
+2026-08-18T06:16:19.580+07:00  INFO 22036 --- [springboot-book-generate-images] [           main] ngbootBookGenerateImagesApplicationTests : Started SpringbootBookGenerateImagesApplicationTests in 0.201 seconds (process running for 9.204)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s -- in com.hoangkhoi.springboot_book_generate_images.SpringbootBookGenerateImagesApplicationTests
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -378,8 +374,8 @@ java.lang.IllegalStateException: safety filter
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.571 s
-[INFO] Finished at: 2026-08-18T05:31:31+07:00
+[INFO] Total time:  11.130 s
+[INFO] Finished at: 2026-08-18T06:16:19+07:00
 [INFO] ------------------------------------------------------------------------
 =============================================================
 FRONTEND — Vitest + React Testing Library
@@ -395,16 +391,16 @@ FRONTEND — Vitest + React Testing Library
 [22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
 ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
 
- [32m✓[39m src/components/EntityCard.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[90m 199[2mms[22m[39m
- [32m✓[39m src/pages/ProjectListPage.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[90m 206[2mms[22m[39m
- [32m✓[39m src/hooks/useProject.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 332[2mms[22m[39m
- [32m✓[39m src/components/StepPanel.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 758[2mms[22m[39m
-   [33m[2m✓[22m[39m StepPanel[2m > [22moffers the current step and an optional style on step one [33m583[2mms[22m[39m
+ [32m✓[39m src/components/EntityCard.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[90m 83[2mms[22m[39m
+ [32m✓[39m src/pages/ProjectListPage.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[90m 99[2mms[22m[39m
+ [32m✓[39m src/hooks/useProject.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 333[2mms[22m[39m
+ [32m✓[39m src/components/StepPanel.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 626[2mms[22m[39m
+   [33m[2m✓[22m[39m StepPanel[2m > [22moffers the current step and an optional style on step one [33m450[2mms[22m[39m
 
 [2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
 [2m      Tests [22m [1m[32m21 passed[39m[22m[90m (21)[39m
-[2m   Start at [22m 05:31:33
-[2m   Duration [22m 2.65s[2m (transform 349ms, setup 632ms, collect 1.36s, tests 1.49s, environment 3.32s, prepare 831ms)[22m
+[2m   Start at [22m 06:16:20
+[2m   Duration [22m 2.42s[2m (transform 310ms, setup 662ms, collect 1.10s, tests 1.14s, environment 3.41s, prepare 689ms)[22m
 
 
 backend exit=0  frontend exit=0

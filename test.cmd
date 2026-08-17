@@ -13,8 +13,10 @@ if exist frontend (
   echo ============================================================= >> test-report.txt
   echo FRONTEND - Vitest + React Testing Library >> test-report.txt
   echo ============================================================= >> test-report.txt
-  call npm --prefix frontend test >> test-report.txt 2>&1
+  pushd frontend
+  call npm test >> ..\test-report.txt 2>&1
   set FRONTEND=%ERRORLEVEL%
+  popd
 ) else (
   set FRONTEND=0
 )

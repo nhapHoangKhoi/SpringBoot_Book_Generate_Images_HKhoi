@@ -39,7 +39,7 @@ public class ProjectRepository {
     private final Path dataDir;
 
     public ProjectRepository(JsonStore store, ProjectLocks locks,
-            @Value("${app.data-dir}") Path dataDir) {
+            @Value("${app.data-dir:data}") Path dataDir) {
         this.store = store;
         this.locks = locks;
         this.dataDir = dataDir;
