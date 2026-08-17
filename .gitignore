@@ -34,3 +34,7 @@ build/
 .vscode/
 
 **/application.properties
+
+
+*.md
+
