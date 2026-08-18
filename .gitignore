@@ -36,5 +36,13 @@ build/
 **/application.properties
 
 
-*.md
 
+
+docs/plan.md
+
+DECISIONS.md
+HELP.md
+CLAUDE.md
+TESTING.md
+
+frontend/README.md
