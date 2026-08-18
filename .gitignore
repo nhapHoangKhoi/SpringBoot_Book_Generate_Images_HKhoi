@@ -41,8 +41,7 @@ build/
 #docs/plan.md
 #README.md
 
-DECISIONS.md
-CLAUDE.md
-TESTING.md
+#DECISIONS.md
+#TESTING.md
 
 frontend/README.md
