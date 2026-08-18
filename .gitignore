@@ -38,10 +38,10 @@ build/
 
 
 
-docs/plan.md
+#docs/plan.md
+#README.md
 
 DECISIONS.md
-HELP.md
 CLAUDE.md
 TESTING.md
 
